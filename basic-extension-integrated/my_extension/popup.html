@@ -10,7 +10,7 @@
         background-color: #181818;
         color: #fff;
       }
-      #summary {
+      #Briefify {
         margin-top: 10px;
       }
       button {
@@ -23,20 +23,39 @@
       button:hover {
         background-color: #c90000;
       }
-      input[type="text"] {
-        width: 90%;
-        padding: 5px;
-        margin: 10px 0;
-        color: #fff;
-        background-color: #282828;
-        border: 1px solid #555;
+      .spinner {
+        display: none;
+        vertical-align: middle; 
+        border: 5px solid #2C2C2C; 
+        border-top: 5px solid #FF0000; 
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 2s linear infinite;
+        margin-right: 8px; 
       }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .cross {
+        display: none; 
+        vertical-align: middle; 
+        width: 20px;
+        height: 20px;
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+        margin-right: 8px; 
+      }
+
     </style>
   </head>
   <body>
-    <h1>Summary</h1>
-    <input type="text" id="videoId" placeholder="Enter Video ID here">
-    <div id="summary">Click 'Summarize' to get a summary of the video</div>
+    <h1>Briefify</h1>
+    <div id="Briefify">Click 'Summarize' to get a summary of the video</div>
+    <div id="spinner" class="spinner"></div>
+    <div id="errorIcon" class="cross">X</div>
     <button id="summarizeBtn">Summarize</button>
     <script src="popup.js"></script>
   </body>
