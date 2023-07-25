@@ -22,7 +22,7 @@ document.getElementById('summarizeBtn').addEventListener('click', function () {
           }
         }
       }
-      xhr.open('GET', `https://web-production-3356.up.railway.app/v1/api/${videoId}`, true);
+      xhr.open('GET', `https://web-production-0fae.up.railway.app/v1/api/${videoId}`, true);
       xhr.send();
 
     } else {
